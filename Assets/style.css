@@ -1,0 +1,47 @@
+/* Background stuff */
+body {
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+  }
+
+/* Main Text*/
+.title {
+    display: flex;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* What's on your mind?*/
+mind {
+    display: flex;
+    text-indent: 8px;
+    margin-top: 20px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-main,.left-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.left-main {
+    background-image:url("./yellowcircle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 820px;
+}
+
+.right-main {
+    display: flex;
+    flex-direction: column;
+}
