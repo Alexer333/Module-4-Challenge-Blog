@@ -1,27 +1,37 @@
 //Input and Label for user, title, and content...
-fetch(username)
-fetch(title)
-fetch(content)
 
+function formThingy(event){
+    const stringPost = localStorage.getItem("blogEntries");
+    const blogEntries = JSON.parse(stringPost) || [];
 
+    submit.addEventListener(`click`, formThingy);
+    const post = JSON.parse(localStorage.getItem(`blogEntries`));
 
-//Function for making a new post
-const newPost= function(){
-    //Saves post in storage
-        const stringContent = localStorage.getItem(`userPost`);
-        const allPosts = JSON.parse(stringContent);
-    
-    //For when a new post is made...
-        for(i = 0; i < newContent.length(); i++){
-            let div = document.createElement(`div`);
-            let title = document.createElement(`h1`);
-            let constant = document.creatElement(`p`);
-            let author = document.createElement(`h2`);
-    
-            title.textContent = newContent(i).userTitle;
-    
-        };
-        console.log(allPosts);
-        console.log(postContent);
+const formContent = {
+username: username.value,
+title: title.value,
+content: content.value.trim()
+
     }
-    newPost();
+
+if(formContent.username==`` || formContent.title=='' || formContent.content==''){
+    alert("All fields must be filled!");
+    event.preventDefault();
+    console.log(`Error - Field Empty`);
+} else {
+    console.log(`Succesfully Pushed!`);
+    post.push(formContent);
+    localStorage.setItem(`blogEntries`, JSON.stringify(blogEntries));
+}
+
+}
+
+username = document.getElementById("username");
+title = document.getElementById("title");
+content = document.getElementById("content");
+
+submit = document.getElementById("submit");
+
+console.log(username);
+console.log(title);
+console.log(content);

@@ -1,4 +1,13 @@
 /* Background stuff */
+/* :root {
+    color-scheme: light;
+} */
+
+.darkMode {
+    background-color: black;
+    color: white;
+  }
+
 body {
     background-color: white;
     background-size: cover;
@@ -9,6 +18,14 @@ body {
 .title {
     display: flex;
     color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -35,7 +52,7 @@ main {
 }
 
 .left-main {
-    background-image:url("./yellowcircle.png");
+    background-image:url("./purplecircle.png");
     background-position: center;
     background-repeat: no-repeat;
     height: 820px;
@@ -44,4 +61,41 @@ main {
 .right-main {
     display: flex;
     flex-direction: column;
+}
+
+.rightcorner {
+    /*Put in top right corner of blog page, give an event listener later!*/
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+.leftcorner {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 93px;
+}
+
+.footbutitsalsothecorner{
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.postbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+    height: 125px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(138, 138, 138);
 }
